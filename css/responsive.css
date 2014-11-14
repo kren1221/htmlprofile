@@ -1,0 +1,94 @@
+@media screen and (min-width: 580px) {          /*tells the css to target digital media rather than print media, this one is ideal for 
+  
+  
+  
+/**********************
+TWO COLUM LAYOUT
+***********************/
+  
+  #primary {
+    width: 50%;
+    float: left;
+  }
+  
+  #secondary {
+    width: 40%;       
+    float: right;         /*just to make sure it works if there's browser issue on a rare occasion*/
+  }  
+
+
+/**********************
+3 * 5 = 15% margin
+100% - 15% = 85%
+  85/3 =28.33333... resist to rounding
+***********************/
+  
+
+/**********************
+PAGE: PORTFOLIO
+***********************/
+
+  #gallery li {
+    width: 28.3333%;
+  }
+  
+  #gallery li:nth-child(4n) {    /* this function helps select any element in every nth element, 4th in                                       this case, and correct responsive issue.*/
+    clear: left;
+  }
+
+  
+/*
+In this video, the selector :nth-child(4n) is used to correct a responsive issue on every 4th item. In other words, this will select the 4th item, 8th item, 12th item, and so on. This fixes the specific problem in the video, but if more gallery items are added beyond the 5 that are present in this project, the design will start to break again. That's because there are 3 items in each row, and every 4th item could appear at the beginning, middle, or end of a row.
+
+Instead, we want to select the first item in each row. A more robust solution is to use the selector :nth-child(3n + 1) instead. This will select every 3rd item plus 1. In other words, this will select the 4th item, 7th item, 10th item, and so on.
+*/
+  
+
+/**********************
+PAGE: ABOUT
+***********************/
+  
+  .Profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+
+}
+
+
+@media screen and (min-width: 660px) {      /*for tablets and desktop resolution*/
+ 
+/**********************
+HEADER
+***********************/
+  
+  nav {
+    background: none;  /* backgroudn is removed so the texts can sit against the header background*/
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+  }
+  
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
+  
+  header {
+    border-bottom: 5px solid #599a68;     /*the 5px represents the width of the border*/
+    margin-bottom: 60px;
+  }
+}
